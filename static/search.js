@@ -38,7 +38,7 @@ function search() {
 
 		if(textValue != null || uriValue != null) {
 
-			if(textValue.match(regexMatch) != null ||
+			if( ((typeof textValue) === 'string')  && textValue.match(regexMatch) != null ||
 				uriValue.hostname.match(regexMatch) ||
 				searchTermUri != null &&
 				uriValue.hostname != 'localhost' && (
